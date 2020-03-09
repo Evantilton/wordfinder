@@ -43,3 +43,12 @@ modify the code in the future if needed
 in seeing code that would be easy to write tests for
 ● Performance This is less important than the other criteria, but a faster program would
 be a bonus
+
+
+
+TASK LIST:
+[] figure out how long the string is (1x1, 2x2, 15x15), we will need to know that I think.
+[] have it take each line horizontally forward and backward and put it into an object.
+[] have it take each line vertically, forward and backward and put it into an object.
+[] have it take each line diagonally, forward and backward and put it into an object.
+[] double check that the dictionary works as intended.
