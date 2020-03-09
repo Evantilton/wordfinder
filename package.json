@@ -17,5 +17,7 @@
     "url": "https://github.com/Evantilton/wordfinder/issues"
   },
   "homepage": "https://github.com/Evantilton/wordfinder#readme",
-  "dependencies": {}
+  "dependencies": {
+    "word-list": "^3.1.0"
+  }
 }

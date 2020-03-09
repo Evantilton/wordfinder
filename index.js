@@ -1,9 +1,10 @@
-var en = require('dictionary-en')
-
-
-en(function (err, result) {
-    console.log(err || result)
-  });
+const fs = require('fs');
+ 
+// Returns the path to the word list which is separated by `\n`
+const wordListPath = require('word-list');
+ 
+const wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n');
+//=> […, 'abmhos', 'abnegate', …]
 
 function wordfinder(string) {
     let newString = [...string];
@@ -15,7 +16,7 @@ function wordfinder(string) {
     let length = newString.length;
     let sideLength = Math.sqrt(length)
 
-
+    console.log(wordArray)
     console.log(newString);
     console.log(newString.length);
     console.log(sideLength);
@@ -24,4 +25,3 @@ function wordfinder(string) {
 }
 
 wordfinder(`B A D A B A D A B A D A B A D A`)
-en("base")
