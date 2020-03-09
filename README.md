@@ -47,7 +47,7 @@ be a bonus
 
 
 TASK LIST:
-[] figure out how long the string is (1x1, 2x2, 15x15), we will need to know that I think.
+[x] figure out how long the string is (1x1, 2x2, 15x15), we will need to know that I think.
 for this I just take the length and find the square root. 
 [] I should probably make sure it only takes in alphbetical characters too.
 [] have it take each line horizontally forward and backward and put it into an object.

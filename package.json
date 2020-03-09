@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Evantilton/wordfinder/issues"
   },
-  "homepage": "https://github.com/Evantilton/wordfinder#readme"
+  "homepage": "https://github.com/Evantilton/wordfinder#readme",
+  "dependencies": {}
 }

@@ -1,12 +1,20 @@
+var en = require('dictionary-en')
+
+
+en(function (err, result) {
+    console.log(err || result)
+  });
+
 function wordfinder(string) {
     let newString = [...string];
 
     newString = newString.filter(function(str) {
         return /\S/.test(str);
     });
+
     let length = newString.length;
     let sideLength = Math.sqrt(length)
-    
+
 
     console.log(newString);
     console.log(newString.length);
@@ -16,3 +24,4 @@ function wordfinder(string) {
 }
 
 wordfinder(`B A D A B A D A B A D A B A D A`)
+en("base")
