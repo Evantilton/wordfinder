@@ -6,22 +6,30 @@ const wordListPath = require('word-list');
 const wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n');
 //=> […, 'abmhos', 'abnegate', …]
 
-function wordfinder(string) {
+
+//begin wordFinder
+function wordFinder(string) {
     let newString = [...string];
 
     newString = newString.filter(function(str) {
         return /\S/.test(str);
     });
 
-    let length = newString.length;
-    let sideLength = Math.sqrt(length)
+    let numberCharacters = newString.length;
+    let sideLength = Math.sqrt(numberCharacters)
 
-    console.log(wordArray)
     console.log(newString);
-    console.log(newString.length);
+    console.log(numberCharacters);
     console.log(sideLength);
+    
+    horizontalParser (newString, sideLength)
+} //end wordFinder
 
+function horizontalParser(newString, sideLength) {
+    
+
+    console.log(newString.slice(0, sideLength));
     
 }
 
-wordfinder(`B A D A B A D A B A D A B A D A`)
+wordFinder(`C O O L C O O L C O O L C O O L`);

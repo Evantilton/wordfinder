@@ -54,3 +54,7 @@ for this I just take the length and find the square root.
 [] have it take each line vertically, forward and backward and put it into an object.
 [] have it take each line diagonally, forward and backward and put it into an object.
 [] double check that the dictionary works as intended.
+
+
+Dependencies:
+word-list
