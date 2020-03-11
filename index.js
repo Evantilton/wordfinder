@@ -22,7 +22,9 @@ function wordFinder(string) {
     console.log(numberCharacters);
     console.log(sideLength);
     
-    horizontalParser (newString, sideLength)
+    let testVar = horizontalParser(newString, sideLength);
+    
+
 } //end wordFinder
 
 function horizontalParser(newString, sideLength) {
@@ -32,4 +34,18 @@ function horizontalParser(newString, sideLength) {
     
 }
 
+function wordParser(string) {
+    let foundWords = [];
+    let newString = [];
+    if (string = true) {
+        for (let i = 0; i < string.length; index++) {
+            
+        }
+    }
+
+}
+
+
 wordFinder(`C O O L C O O L C O O L C O O L`);
+
+
