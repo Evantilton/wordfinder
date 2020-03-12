@@ -24,19 +24,12 @@ function wordFinder(rows, columns, string) {
     console.log("number of Characters",numberCharacters);
     console.log("number of Rows",numberOfRows);
     console.log("number of columns",numberOfColumns);
-    
-    
-    // let i,j,horizontalArray = [],chunk = numberOfColumns;
-    // for (i=0,j=newString.length; i<j; i+=chunk) {
-    //     horizontalArray.push(newString.slice(i,i+chunk));
-    // }
-    // console.log(horizontalArray);
 
     let horizontalArray = horizontalParser(newString, numberOfColumns);
     console.log("THIS IS HORIZONTAL ARRAY", horizontalArray);
 
 
-    let verticalArray = verticalParser(newString, numberOfRows);
+    let verticalArray = verticalParser(horizontalArray, numberOfRows);
     console.log("THIS IS VERTICAL ARRAY", verticalArray)
 
 }
@@ -51,29 +44,13 @@ function horizontalParser(newString, numberOfColumns) {
 
 }
 
-function verticalParser(newString, numberOfRows) {
-    let i,j,verticalArray = [],chunk = numberOfRows;
-    for (i=0,j=newString.length; i<j; i+=chunk) {
-        verticalArray.push(newString.slice(i,i+chunk));
+function verticalParser(horizontalArray, numberOfRows) {
+    let verticalArray = [],
+    for (let i = 0; i < array.length; index++) {
+        
     }
-    return(verticalArray);
 }
 
-    
-
-// function wordParser(string) {
-//     let foundWords = [];
-//     let newString = [];
-//     if (string = true) {
-//         for (let i = 0; i < string.length; index++) {
-            
-//         }
-//     }
-
-// }
-
-
-// wordFinder(2,2,`C O O L C O O L C O O L C O O L`);
 
 
 wordFinder (15,15,`A T L L F U V D E Y O B Z V D
