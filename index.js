@@ -7,9 +7,8 @@ const wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n');
 //=> […, 'abmhos', 'abnegate', …]
 
 //begin wordFinder
-function wordFinder(rows, columns, string) {
+function wordFinder(columns, string) {
     newString = [...string];
-    let numberOfRows = rows;
     let numberOfColumns = columns;
 
     newString = newString.filter(function(str) {
@@ -22,14 +21,13 @@ function wordFinder(rows, columns, string) {
 
     console.log("newString", newString);
     console.log("number of Characters",numberCharacters);
-    console.log("number of Rows",numberOfRows);
     console.log("number of columns",numberOfColumns);
 
     let horizontalArray = horizontalParser(newString, numberOfColumns);
     console.log("THIS IS HORIZONTAL ARRAY", horizontalArray);
 
 
-    let verticalArray = verticalParser(horizontalArray, numberOfRows);
+    let verticalArray = verticalParser(newString, numberOfColumns);
     console.log("THIS IS VERTICAL ARRAY", verticalArray)
 
 }
@@ -44,16 +42,23 @@ function horizontalParser(newString, numberOfColumns) {
 
 }
 
-function verticalParser(horizontalArray, numberOfRows) {
-    let verticalArray = [],
-    for (let i = 0; i < array.length; index++) {
-        
+function verticalParser(newString, numberOfColumns) {
+    let verticalArray = [];
+    for (let i = 0, j = 0; i < newString.length; i++) {
+        j = (i+1)%numberOfColumns;
+        if(!verticalArray[j]) {
+            verticalArray[j]= [];
+        }
+        verticalArray[j].push(newString[i]);
     }
+    return verticalArray;
 }
 
 
 
-wordFinder (15,15,`A T L L F U V D E Y O B Z V D
+
+wordFinder (15,`
+A T L L F U V D E Y O B Z V D
 W F B N E D X G H E A N P O R
 O T V B Y L A L G T D K E A A
 D O O W D R A H H E L A S P Z
@@ -67,4 +72,21 @@ B P A S D Q P E T X J P S E S
 B R K R R E U E T T D Z D K L
 L B J B C B B L E U B I U R F
 L N H S F H T K R K G H Y A M
-O J H D N Q A J S Q P L R M U`)
+O J H D N Q A J S Q P L R M U
+`)
+
+
+wordFinder (15, `
+A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z 1 2 3 4
+A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z 1 2 3 4
+A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z 1 2 3 4
+A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z 1 2 3 4
+A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z 1 2 3 4
+`)
+
+
