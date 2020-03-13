@@ -27,6 +27,10 @@ function wordFinder(columns, string) {
     console.log("THIS IS HORIZONTAL ARRAY", horizontalArray);
 
 
+   
+//the array.reverse() method can be used to test the reverse of the lines I need after I successfully run them.
+
+ 
     let verticalArray = verticalParser(newString, numberOfColumns);
     console.log("THIS IS VERTICAL ARRAY", verticalArray)
 
@@ -41,6 +45,8 @@ function horizontalParser(newString, numberOfColumns) {
     return(horizontalArray);
 
 }
+
+
 
 function verticalParser(newString, numberOfColumns) {
     let verticalArray = [];
@@ -88,5 +94,3 @@ P Q R S T U V W X Y Z 1 2 3 4
 A B C D E F G H I J K L M N O
 P Q R S T U V W X Y Z 1 2 3 4
 `)
-
-
